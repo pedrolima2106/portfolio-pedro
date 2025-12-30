@@ -583,3 +583,107 @@ p {
   font-size: 0.85rem;
   color: #aaa;
 }
+
+/* ======= Curiculo ======= */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.conteudo-modal {
+  background-color: white;
+  padding: 20px;
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 12px;
+  overflow: auto;
+  position: relative;
+}
+
+.conteudo-modal img {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+}
+
+#meuPopup {
+  display: none; /* ISSO impede abrir sozinho */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-conteudo {
+  position: relative;
+  background: #9d4edd;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90vw;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto; /* 🔥 ATIVA O SCROLL */
+}
+
+.popup-conteudo img {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain; /* ESSENCIAL para não cortar */
+  display: block;
+  margin: 0 auto;
+}
+
+/* Botão fechar */
+.fechar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #6a0dad;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* Galeria */
+.galeria {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Imagens */
+.galeria img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+.popup-conteudo::-webkit-scrollbar {
+  width: 8px;
+}
+
+.popup-conteudo::-webkit-scrollbar-thumb {
+  background: #6a0dad;
+  border-radius: 10px;
+}

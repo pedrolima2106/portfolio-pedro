@@ -7,6 +7,7 @@
 
   <!-- CSS externo -->
   <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
 
   <!-- Fonte Inter -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -24,8 +25,24 @@
         <li><a href="#contact">Contato</a></li>
       </ul>
     </nav>
-    <a href="#" class="btn-curriculo">Currículo</a>
+    <button class="btn-curriculo" onclick="abrirPopup()">Currículo</button>
   </header>
+
+  <!-- Estrutura do Popup -->
+<div id="meuPopup" onclick="fecharPopup()">
+  <div class="popup-conteudo" onclick="event.stopPropagation()">
+    <button class="fechar" onclick="fecharPopup()">✕</button>
+
+    <div class="galeria">
+      <img src="img/Curriculo_Pedro_Santana_p1.jpg" alt="1 Parte do curriculo">
+      <img src="img/Curriculo_Pedro_Santana_p2.jpg" alt="2 Parte do curriculo">
+      <img src="img/Curriculo_Pedro_Santana_p3.jpg" alt="3 Parte do curriculo">
+      <img src="img/Curriculo_Pedro_Santana_p4.jpg" alt="4 Parte do curriculo">
+    </div>
+
+  </div>
+</div>
+
 
   <!-- ======= HOME ======= -->
   <section id="home" class="home">
@@ -327,7 +344,7 @@
 
   <!-- Botão ver mais -->
   <div class="projects-more">
-    <a href="#" class="btn">Ver todos os projetos</a>
+    <a href="https://github.com/pedrolima2106" class="btn">Ver todos os projetos</a>
   </div>
 </section>
 
